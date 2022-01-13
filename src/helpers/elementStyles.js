@@ -13,8 +13,8 @@ export function setParallaxStyles(elInner, offsets, percentMoved, clamps) {
         y: { value: yv, unit: yu },
     } = getParallaxOffsets(offsets, percentMoved);
 
-    const translateX = Math.min(clamps && clamps[0] || 0), xv)
-    const translateY = Math.min(clamps && clamps[1] || 0), yv)
+    const translateX = Math.min((clamps && clamps[0] || 0), xv)
+    const translateY = Math.min((clamps && clamps[1] || 0), yv)
 
     // Apply styles
     elInner.style.transform = `translate3d(${translateX}${xu}, ${translateY}${yu}, 0)`;
