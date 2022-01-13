@@ -10,7 +10,8 @@ class Parallax extends Component {
         tagOuter: 'div',
         x: [0, 0],
         y: [0, 0],
-        clamps: [0, 0]
+        clamps: [0, 0],
+        initialOffsets: [0, 0]
     };
 
     static propTypes = {
@@ -31,6 +32,9 @@ class Parallax extends Component {
         clamps: PropTypes.arrayOf(
             PropTypes.oneOfType([PropTypes.number])
         ),
+        initialOffsets: PropTypes.arrayOf(
+            PropTypes.oneOfType([PropTypes.number])
+        )
     };
 
     componentDidMount() {
@@ -82,6 +86,7 @@ class Parallax extends Component {
                 y0: this.props.y[0],
                 y1: this.props.y[1],
                 clamps: this.props.clamps,
+                initialOffsets: this.props.initialOffsets,
             },
         };
     }
